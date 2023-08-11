@@ -1,10 +1,10 @@
 #include <windows.h>
 
-// Declaración de la función de ventana
+// Declaración de la función de ventana 
 LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) {
-    // Registrar la clase de ventana
+    // Registrar la clase de la ventana <-----
     const wchar_t CLASS_NAME[]  = L"Sample Window Class";
 
     WNDCLASS wc = {0};
@@ -45,7 +45,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
     return 0;
 }
 
-// Procedimiento de la ventana
+// Se activa el procedimiento de la ventana <----
 LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) {
     switch (uMsg) {
         case WM_CLOSE:
