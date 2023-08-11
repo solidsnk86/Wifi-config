@@ -7,10 +7,9 @@ int main() {
     CURL *curl = curl_easy_init();
 
     if (curl) {
-        // URL del formulario de inicio de sesión del módem
         std::string url = "http://192.168.1.1/login";
 
-        // Datos de inicio de sesión
+        // Datos de inicio de sesión de la app web
         std::string post_data = "username=my_username&password=my_password";
 
         // Configurar la solicitud POST
@@ -18,7 +17,7 @@ int main() {
         curl_easy_setopt(curl, CURLOPT_POSTFIELDS, post_data.c_str());
         curl_easy_setopt(curl, CURLOPT_POSTFIELDSIZE, post_data.length());
 
-        // Realizar la solicitud POST
+        // Realizar la solicitud PoST
         CURLcode res = curl_easy_perform(curl);
 
         if (res != CURLE_OK) {
