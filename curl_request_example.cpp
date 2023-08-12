@@ -10,7 +10,7 @@ int main() {
         std::string url = "http://192.168.1.1/login";
 
         // Datos de inicio de sesión de la app web
-        std::string post_data = "username=my_username&password=my_password";
+        std::string post_data = "username=admin&password=admin";
 
         // Configurar la solicitud POST
         curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
